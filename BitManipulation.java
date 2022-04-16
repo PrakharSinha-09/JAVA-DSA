@@ -27,6 +27,7 @@ public class BitManipulation {
         int newNo= bitmask | n;
         System.out.println(newNo);
 
+        /*
         //clearBit
         int posit=2;
         int bitmaskk=1<<posit;
@@ -52,7 +53,7 @@ public class BitManipulation {
         int newNumber = newBitMask & n;
         System.out.println(newNumber);
        }
- 
+       */
 
     }
 }

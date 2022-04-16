@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ArraySubset {
+class hello {
     /*
     static List<List<Integer>> subset(int arr[])
     {

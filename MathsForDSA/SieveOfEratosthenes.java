@@ -30,7 +30,7 @@ The sieve of Eratosthenes is one of the most efficient ways to find all primes s
     
     public static void main(String[] args) {
         int n=50;
-        boolean[] primes=new boolean[n+1];              //because we have to include 40 in the boolean array as well..and as the index starts with zero it will just add uptil 39 only...so the size is 1+ the n.
+        boolean[] primes=new boolean[n+1];              //because we have to include 50 in the boolean array as well..and as the index starts with zero it will just add uptil 39 only...so the size is 1+ the n.
         sieve(n, primes);      
     }
 }

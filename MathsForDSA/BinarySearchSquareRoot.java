@@ -41,7 +41,7 @@ public class BinarySearchSquareRoot {
         
     }
     public static void main(String[] args) {
-        int n=40;
+        int n=36;
         int p=3;           //precision value(means upto how many decimal places we need the answer)
         System.out.printf("%.3f",sqrt(n, p));             //for 3 decimal places
     }

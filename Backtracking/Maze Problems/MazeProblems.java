@@ -5,21 +5,37 @@ public class MazeProblems{
 
     static int countPath(int r,int c)
     {
-        if(r==1 || c==1)
+        if(r==1 || c==1)                //while there is one path means r==1 or c==1 obviosly return 1 from there!
         {
             return 1;
         }
 
-        int left=countPath(r-1, c);
-        int diagonal=countPath(r-1, c-1);                    //if allowing diagonal paths too...
-        int right=countPath(r, c-1);
+        int left=countPath(r-1, c);                         //answer by left recursion calls
+        //int diagonal=countPath(r-1, c-1);                 //if allowing diagonal paths too...
+        int right=countPath(r, c-1);                        //answer by right recursion calls
 
-        return left+diagonal+right;
+        return left+right;
     }
 
-    //Now Lets Print.
+    //Now Lets Print. (when you are only allowed to move down and right)
     static void printPath(String p,int r,int c)
     {
+        if(r==1 && c==1)
+        {
+            System.out.println(p);
+            return;
+        }
+
+        if(r>1)
+        {
+            printPath(p+"D", r-1, c);
+        }
+
+        if(c>1)
+        {
+            printPath(p+"R", r, c-1);
+        }
+        /*
         if(r==1 & c==1)
         {
             System.out.println(p);
@@ -42,8 +58,7 @@ public class MazeProblems{
             printPath(p+'H', r, c-1);
             //printPath(p, r, c-1);
         }
-
-       
+        */
     }
 
      //Now Lets Return iN Array List
@@ -188,25 +203,25 @@ public class MazeProblems{
         path[r][c]=0;
     }
     public static void main(String[] args) {
-        // System.out.println(countPath(3, 3));    
-        // printPath("", 3, 3);      
+        System.out.println(countPath(3, 3));    
+        printPath("", 3, 3);      
         // System.out.println(print("", 3, 3));   
 
-        boolean[][] maze={
-            {true,true,true},
-            {true,false,true},
-            {true,true,true}
-        };
+        // boolean[][] maze={
+        //     {true,true,true},
+        //     {true,false,true},
+        //     {true,true,true}
+        // };
 
-        boolean[][] maze1={
-            {true,true,true},
-            {true,true,true},
-            {true,true,true}
-        };
-        //pathRestrictions("", maze, 0, 0);
-        //allPath("", maze1, 0, 0);
+        // boolean[][] maze1={
+        //     {true,true,true},
+        //     {true,true,true},
+        //     {true,true,true}
+        // };
+        // //pathRestrictions("", maze, 0, 0);
+        // //allPath("", maze1, 0, 0);
 
-        int[][] path=new int[maze.length][maze[0].length];
-        allPathPrint("", maze1, 0, 0, path, 1);
+        // int[][] path=new int[maze.length][maze[0].length];
+        // allPathPrint("", maze1, 0, 0, path, 1);
     }
 }

@@ -57,16 +57,28 @@ public class MergeSortLL {
 
     public ListNode getMid(ListNode head)
     {
-        ListNode midPrev=null;
-        while(head!=null && head.next!=null)            
+        // ListNode midPrev=null;
+        // while(head!=null && head.next!=null)            
+        // {
+        //     midPrev=(midPrev==null)?head:midPrev.next;
+        //     head=head.next.next;
+        // }
+
+        // ListNode mid=midPrev.next;
+        // midPrev.next=null;
+
+        ListNode fast=head;
+        ListNode slow=head;
+        ListNode temp=null;
+
+        while(fast!=null && fast.next!=null)
         {
-            midPrev=(midPrev==null)?head:midPrev.next;
-            head=head.next.next;
+            temp=slow;
+            slow=slow.next;
+            fast=fast.next.next;
         }
 
-        ListNode mid=midPrev.next;
-        midPrev.next=null;
-
-        return mid;
+        temp.next=null;
+        return slow;
     }
 }

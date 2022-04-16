@@ -58,7 +58,7 @@ public class RemoveALetter {
         }
         else
         {
-            return a.charAt(0)+remove(a.substring(1));            
+            return a.charAt(0)+remove(a.substring(1));        //this means i know you are going up cna youu add my answer also, yes obviously when return remove() is written it will go up and up , so ch is asking if u are going up can you add my answer also    
         }
     }
     */
@@ -78,7 +78,7 @@ public class RemoveALetter {
         }
         else
         {
-            return a.charAt(0)+remove(a.substring(1));            
+            return ch+remove(a.substring(1));            
         }
     }
     public static void main(String[] args) {
