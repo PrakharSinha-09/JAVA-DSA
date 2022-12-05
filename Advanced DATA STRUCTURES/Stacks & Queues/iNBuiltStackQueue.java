@@ -8,14 +8,19 @@ public class iNBuiltStackQueue {
         stack.push(2);
         stack.push(9);
         stack.push(18);
+        stack.push(1);
+        stack.clear();                   //empties the entire stack at once
 
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.pop());
 
+        if(stack.isEmpty()){
+            System.out.println("Empty Stack");
+        }
         //Inbuit Queue👌
         Queue<Integer> queue = new LinkedList<>();
         queue.add(3);
@@ -27,11 +32,11 @@ public class iNBuiltStackQueue {
         System.out.println(queue.remove());
         System.out.println(queue.remove());
 
-        //Double Ended Queue👍
-        Deque<Integer> deque = new ArrayDeque<>();
-        deque.add(89);
-        deque.addLast(78);
-        deque.removeFirst();
+        //Double Ended Queue
+        // Deque<Integer> deque = new ArrayDeque<>();
+        // deque.add(89);
+        // deque.addLast(78);
+        // deque.removeFirst();
         // etc etc
     }
 }

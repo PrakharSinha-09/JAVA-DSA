@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class MergeSortiNplace {
+class MergeSortiNplac {
     static void  mergeSort(int[] arr,int start,int end)
     {
         if(end-start==1)
@@ -62,7 +62,7 @@ public class MergeSortiNplace {
     }
 
     public static void main(String[] args) {
-        int[] arr={5,4,3,2,1};
+        int[] arr={4,1,3,9,7};
         mergeSort(arr, 0, arr.length);
         System.out.println(Arrays.toString(arr));
     }

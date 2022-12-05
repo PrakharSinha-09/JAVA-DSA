@@ -1,0 +1,3 @@
+//Questions I Did On Stack Data Structure On Various Platforms
+
+1. Two Stack using single array ~ CodeStudio  approached using 2 pointer

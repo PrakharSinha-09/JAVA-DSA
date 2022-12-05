@@ -1,40 +1,40 @@
 import java.util.Arrays;
 
-public class Selection{
-    static void selection(int[] arr)
+public class Selection {
+    static void sort(int[] arr)
     {
-        int n=arr.length;
-        for(int i=0;i<n;i++)
+        
+        for(int i=0;i<arr.length;i++)
         {
-            int last=n-i-1;
-            int maxInd=getMaxIndex(arr,0,last);
-            swap(arr, maxInd, last);
-
-        }
-        System.out.println(Arrays.toString(arr));
+            int last=arr.length-i-1;
+            int maxInd=max(arr, last);
+            swap(arr,last,maxInd);;
+        }   
     }
 
-    static int getMaxIndex(int[]arr,int start,int end)
+    static int max(int [] arr,int last)
     {
-        int max=start;
-        for(int i=start;i<=end;i++)
+        int maxi=0;
+        for(int i=1;i<=last;i++)
         {
-            if(arr[max]<arr[i])
+            if(arr[i]>arr[maxi])
             {
-                max=i;
+                maxi=i;
             }
         }
-        return max;
+        return maxi;
     }
 
-    static void swap(int arr[],int first,int second)
+
+    static void swap(int[] arr,int start,int end)
     {
-        int temp=arr[first];
-        arr[first]=arr[second];
-        arr[second]=temp;
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
     }
     public static void main(String[] args) {
-        int[] arr={3,2,1,5,7,9};
-        selection(arr);
+        int[] arr={2,3,1,7,4,9};
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }

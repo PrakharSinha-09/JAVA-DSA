@@ -5,7 +5,7 @@ AGENDA: To print the subsequence of a given string
 for ex- for "abc"
 subsequences will be a,b,c,ab,bc,ac,abc
 */
-public class StringSubsequence{
+class StringSubsequenc{
     static void subsequence(String p,String up)                  //up mans unprocessed string i.e., original string and p means processed string..means after manipulation results to be stored here
     {
         if(up.isEmpty())

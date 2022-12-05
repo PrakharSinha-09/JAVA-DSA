@@ -22,7 +22,7 @@ public class Depth_OfBinaryTree{
 
         return 1+Math.max(left, right);
     } 
-
+  
     public static void main(String[] args) {
         Node root=new Node(1);
         root.left=new Node(2);

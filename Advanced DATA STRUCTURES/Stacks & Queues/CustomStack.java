@@ -89,7 +89,7 @@ public class CustomStack {
         //Since we are again trying to push it won't get pushed ass array is full...so we created the dynamic Stack class...lets create instance of that calss and then do the following task 
         stack.push(26);
         stack.push(16);
-
+        stack.push(2);
     
         //stack.pop();
         stack.display();

@@ -16,7 +16,7 @@ public class Diameter_BT {
         int[] diameter=new int[1];           //taking int array of size 1 because we have to pass this as a reference in height function since we cannot pass variable's reference in java, we are doing smartwork here by passing array(working as variable)
         diameter[0]=Integer.MIN_VALUE;
         height(root, diameter);
-        return diameter[0];
+        return diameter[0];                  //on gfg, it worked on returing +1 as an addOn with diameter[0]
 
     }
 

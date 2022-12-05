@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 class Node
 {
@@ -62,23 +62,28 @@ public class BoundaryTraversal {
     {
         Node curr=root.right;
         ArrayList<Integer> list=new ArrayList<>();
-        if(isLeaf(curr)==false)
+        while(curr!=null)
         {
-            list.add(curr.data);
-        }
-        if(curr.left!=null)
-        {
-            curr=curr.left;
-        }
-        if(curr.right!=null)
-        {
-            curr=curr.right;
+
+            if(isLeaf(curr)==false)
+            {
+                list.add(curr.data);
+            }
+            if(curr.right!=null)
+            {
+                curr=curr.right;
+            }
+            else
+            {
+                curr=curr.left;
+            }
         }
 
         for(int i=list.size()-1;i>=0;i--)
         {
             result.add(list.get(i));
         }
+        
     }
 
     static ArrayList <Integer> printBoundary(Node node)
@@ -94,16 +99,18 @@ public class BoundaryTraversal {
 	    return ans;
 	}
     public static void main(String[] args) {
-        Node root=new Node(3);
-        root.left=new Node(9);
-        root.right=new Node(20);
-        root.right.left=new Node(15);
+        Node root=new Node(1);
+        root.left=new Node(2);
+        root.right=new Node(3);
+        root.left.left=new Node(4);
+        root.left.right=new Node(5);
+        root.right.left=new Node(6);
         root.right.right=new Node(7);
-
-
+        root.left.right.left=new Node(8);
+        root.left.right.right=new Node(9);
+        
         ArrayList<Integer> ans1=printBoundary(root);
         System.out.println(ans1);
 
-        
     }
 }

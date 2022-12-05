@@ -15,7 +15,7 @@ public class NewtonSQRT {
         return root;
     }
     public static void main(String[] args) {
-        System.out.println(sqrt(40));
+        System.out.println(sqrt());
     }
     
 }

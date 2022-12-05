@@ -27,27 +27,22 @@ class hello {
     //What if we have duplicate elements present in the array...
     static List<List<Integer>> subsetDuplicate(int arr[])            //took list<list<Integer>> because we have list of list of subsets....#feelKaro.
     {
-        Arrays.sort(arr);
         List<List<Integer>> outer=new ArrayList<>();
-
         outer.add(new ArrayList<>());
-        int start=0;
-        int end=0;
-        for(int i=0;i<arr.length;i++)
-        {   
-            start=0;
-            //if current element and previous element is same then start=end+1;
-            if(i>0 && arr[i]==arr[i-1])               //as we have used arr[i-1]...that is why we are having a check for i>0  otherwise it will throw index out of bound exception.
+
+        for(int n: arr)
+        {
+            int a=outer.size();
+            for(int i=0;i<a;i++)
             {
-                start=end+1;
-            }
-            end=outer.size()-1;
-            int n=outer.size();
-            for(int j=start;j<n;j++)
-            {
-                List<Integer> internal=new ArrayList<>(outer.get(j));
-                internal.add(arr[i]);
-                outer.add(internal);
+                ArrayList<Integer> inner=new ArrayList<>();
+                inner.add(n);
+                if(outer.contains(inner))
+                {
+                    continue;
+                }
+                outer.add(inner);
+            
             }
         }
         return outer;

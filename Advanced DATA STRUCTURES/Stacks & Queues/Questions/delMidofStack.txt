@@ -1,0 +1,30 @@
+import java.util.*;
+public class Solution {
+	public static void deleteMiddle(Stack<Integer> inputStack, int N) {
+		// WRITE YOUR CODE HERE
+        int size=inputStack.size();
+        int top1=N-1;
+        int mid;
+        if(size%2==0)
+        {
+            mid=(size/2)-1; 
+        }
+        else
+        {
+            mid=(size)/2;
+        }
+        
+        Stack<Integer> newStack=new Stack<>();
+        while(top1!=mid)
+        {
+            newStack.push(inputStack.pop());
+            top1--;
+        }
+        inputStack.pop();
+        
+        while(!newStack.isEmpty())
+        {
+            inputStack.push(newStack.pop());
+        }
+	}
+}

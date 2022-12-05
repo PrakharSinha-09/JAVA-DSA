@@ -1,4 +1,4 @@
-public class N_Queens{
+public class N_Queen{
     static int no_OfWays(boolean[][] board,int row)
     {
         if(row==board.length)

@@ -1,8 +1,7 @@
 /*
 AGENDA: To Get The square root of a number using binary search
 */
-public class BinarySearchSquareRoot {
-
+class BinarySearchSquareRoo {
     public static double sqrt(int n,int p)
     {
         int start=0;
@@ -41,8 +40,8 @@ public class BinarySearchSquareRoot {
         
     }
     public static void main(String[] args) {
-        int n=36;
-        int p=3;           //precision value(means upto how many decimal places we need the answer)
+        int n=4;
+        int p=2;           //precision value(means upto how many decimal places we need the answer)
         System.out.printf("%.3f",sqrt(n, p));             //for 3 decimal places
     }
 }

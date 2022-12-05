@@ -101,15 +101,13 @@ class BoxPrice extends BoxWeight
 
     
 }
-public class Inheritance{
+class Inheritance{
 
     public static void main(String[] args) {
         // Box box5 = new BoxWeight(2, 3, 4, 8);
         // System.out.println(box5.w);
 
         BoxPrice box=new BoxPrice();
-
-      
-        
+        System.out.println(box.cost);   
     }
 }

@@ -40,13 +40,13 @@ public class Factors {
             }
         }
 
-        for(int i=list.size()-1;i>=0;i--)
-        {
-            System.out.print(list.get(i)+" ");
-        }
+        // for(int i=list.size()-1;i>=0;i--)
+        // {
+        //     System.out.print(list.get(i)+" ");
+        // }
     }
     public static void main(String[] args) {
-        int n=20;
+        int n=21;
         //factor2(n);                        //factor 2 function will not print the factors in sorted order...
         factor3(n);
         

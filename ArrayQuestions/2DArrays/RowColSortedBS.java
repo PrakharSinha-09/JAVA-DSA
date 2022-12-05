@@ -2,7 +2,7 @@
 AGENDA: To Do binary search in 2d array when the rows and columns are sorted.
 */
 import java.util.Arrays;
-public class RowColSortedBS {
+class RowColSortedBS {
     static int[] Search(int[][] arr,int target)
     {
         int r=0;
@@ -25,7 +25,7 @@ public class RowColSortedBS {
                 c--;
             }
         }
-        return sry[]{-1,-1};                               //if not found.
+        return new int[]{-1,-1};                               //if not found.
     } 
    public static void main(String[] args) {
        int [][] arr={
@@ -34,7 +34,7 @@ public class RowColSortedBS {
            {28,29,37,49},
            {33,34,38,50}
        };
-       int target=77;
+       int target=49;
        int[] posi=Search(arr, target);
        System.out.println(Arrays.toString(posi));
    } 

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Node
 {
     int data;
@@ -12,15 +14,26 @@ class Node
 
 public class DFSTraversals{
 
-    static void preOrder(Node node)
+    static void preOrder(Node node,ArrayList<Integer> lis)
     {
         if(node==null)
         {
             return;
         }
-        System.out.println(node.data);
-        preOrder(node.prev);
-        preOrder(node.next);
+        lis.add(node.data);
+        preOrder(node.prev,lis);
+        preOrder(node.next,lis);
+    }
+
+    static ArrayList<Integer> preOrderr(Node node)
+    {
+        ArrayList<Integer> lis=new ArrayList<>();   
+        if(node==null)
+        {
+            return lis;
+        }
+        preOrder(node, lis);
+        return lis;
     }
     public static void main(String[] args) {
         Node root=new Node(1);
@@ -29,7 +42,9 @@ public class DFSTraversals{
         root.next.prev=new Node(5);
         root.next.next=new Node(8);
 
-        preOrder(root);
+        ArrayList<Integer> ans=preOrderr(root);
+        System.out.println(ans);
+
 
     }
 }
